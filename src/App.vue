@@ -10,9 +10,7 @@
         <section>
           <h3>List of items</h3>
           <div class="dragndrop">
-            <ul
-              class="dragndrop__list"
-            >
+            <ul class="dragndrop__list">
               <li
                 class="dragndrop__item"
                 v-for="(item,idx) in items"
@@ -36,35 +34,41 @@
 
       </div>
     </div>
-      <div class="row">
-        
-        <div class="column small-full medium-third background--dark">
-          <div class="content">
-            <h3>Template</h3>
-            <pre v-highlightjs="code.html"><code class="scss"></code></pre>
-          </div>
-        </div>
-        <div class="column small-full medium-third background--yellow">
-          <div class="content">
-            <h3>SCSS</h3>
-            <pre v-highlightjs="code.scss"><code class="scss"></code></pre>
-          </div>
-        </div>
+    <div class="row">
 
-        <div class="column small-full medium-third background--green">
-          <div class="content">
-            <h3>Script</h3>
-            <pre v-highlightjs="code.vue"><code class="scss"></code></pre>
-          </div>
+      <div class="column small-full medium-third background--dark">
+        <div class="content">
+          <h3>Template</h3>
+          <pre v-highlightjs="code.html"><code class="scss"></code></pre>
         </div>
       </div>
+      <div class="column small-full medium-third background--yellow">
+        <div class="content">
+          <h3>SCSS</h3>
+          <pre v-highlightjs="code.scss"><code class="scss"></code></pre>
+        </div>
+      </div>
+
+      <div class="column small-full medium-third background--green">
+        <div class="content">
+          <h3>Script</h3>
+          <pre v-highlightjs="code.vue"><code class="scss"></code></pre>
+        </div>
+      </div>
+    </div>
+    <sil-footer></sil-footer>
   </div>
 
 </template>
 
 <script>
+import silFooter from "./components/footer.vue";
+
 export default {
   name: "app",
+  components: {
+    silFooter
+  },
   data() {
     return {
       code: {
